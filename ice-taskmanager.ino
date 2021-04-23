@@ -5,6 +5,7 @@
 #define SCREEN_HEIGHT 64
 #define OLED_RESET 4
 #define SCREEN_ADDRESS 0x3C
+#define DISPLAYROTATION 2
 #define DELAY 750
 #define PARTICLES 15
 #define FONT Aldrich_Regular5pt7b
@@ -122,9 +123,7 @@ void setup() {
 		while (1) ; // Don't proceed, loop forever
 	}
 
-	// Flip the display 
-	display.setRotation(2) ;
-	
+	display.setRotation(DISPLAYROTATION) ;
 	display.setTextSize(1) ;
 	display.setTextWrap(true) ;
 	display.setFont(&FONT) ;
