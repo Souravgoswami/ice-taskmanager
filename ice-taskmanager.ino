@@ -6,7 +6,7 @@
 #define OLED_RESET 4
 #define SCREEN_ADDRESS 0x3C
 #define DELAY 750
-#define PARTICLES 20
+#define PARTICLES 15
 #define FONT Aldrich_Regular5pt7b
 #define FONTBIG Aldrich_Regular6pt7b
 #define ARGLEN 101
@@ -122,6 +122,9 @@ void setup() {
 		while (1) ; // Don't proceed, loop forever
 	}
 
+	// Flip the display 
+	display.setRotation(2) ;
+	
 	display.setTextSize(1) ;
 	display.setTextWrap(true) ;
 	display.setFont(&FONT) ;
